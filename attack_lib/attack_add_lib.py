@@ -26,7 +26,8 @@ class PointAddAttacker:
         self.nms_top = config['nms_top']
 
     def get_critical_points(self, model, lidar_points, n_step=30, n_probe=3000):
-    
+        # the initialization is important for point addition attacks, 
+        # if you don't find a suitable AE, try to increase n_steps and n_probe
         lidar_points = lidar_points.cuda()
         lidar_points.requires_grad = False
         
@@ -116,7 +117,7 @@ class PointAddAttacker:
                         format(iteration, loss, forward_time, nms_time))
             
             
-            if iteration > 800 and iteration % 10 == 0:
+            if iteration >= 800 and iteration % 10 == 0:
                 rawadd_save_path = save_path + "add_" + "_" + str(iteration) + ".pt"
                 torch.save(cri_data, rawadd_save_path)
                 raw_save_path = save_path + "total_" + "_" + str(iteration) + ".pt"

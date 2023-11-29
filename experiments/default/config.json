@@ -21,7 +21,7 @@
 
   "cls_threshold": 0.05,
   "nms_iou_threshold": 0.1,
-  "nms_top": 3000,
+  "nms_top": 5000,
 
   "geometry":{
         "L1": -40.0,

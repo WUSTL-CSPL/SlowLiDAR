@@ -334,8 +334,6 @@ def find_reg_target_var_and_mean():
     stds = reg_targets.std(axis=1)
 
     np.set_printoptions(precision=3, suppress=True)
-    print("Means", means)
-    print("Stds", stds)
     return means, stds
 
 def preprocess_to_npy(train=True):

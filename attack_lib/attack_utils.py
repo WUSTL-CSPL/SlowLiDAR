@@ -45,7 +45,8 @@ def box_overlap_loss(corners, eta=-1):
 
 def total_loss(pred, corners, cls_threshold):
     max_obj_loss = max_objects_loss(pred, cls_threshold)
-    #enable box_bound_loss and chamfer_dist requires a powerful GPU with large memory
+    # Generally use max_object_loss is enough to achieve a decent performance
+    # Enabling box_bound_loss and chamfer_dist requires a powerful GPU with large memory
     loss = max_obj_loss
     
     return loss

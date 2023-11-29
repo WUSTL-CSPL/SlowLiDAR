@@ -60,7 +60,7 @@ class PointPerturbAttacker:
                         'total_loss: {:.4f}, forward_time: {:.4f}, nms_time: {:.4f}'.
                         format(iteration, loss, forward_time, nms_time))
                 
-            if iteration > 800 and iteration % 10 == 0:
+            if iteration >= 800 and iteration % 10 == 0:
                 raw_save_path = save_path + "raw" + "_" + str(iteration) + ".pt"
                 torch.save(adv_data, raw_save_path)
                 
