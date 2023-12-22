@@ -45,7 +45,7 @@ Please follow the guidelines in [PIXOR Implementation](https://github.com/philip
 #### Changes
 Compared with original [PIXOR implementations](https://github.com/philip-huang/PIXOR), we have make the following changes:
 
-- We have reimplemented the pre-processing pipelines in Python, transitioning from the original C++ implementation. Detailed descriptions of this process are available in our paper. Consequently, we have excluded the pre-processing time from the overall computation time in our analysis.
+- We have re-implemented the pre-processing pipelines in Python, transitioning from the original C++ implementation. Detailed descriptions of this process are available in our paper. 
 
 - We have changed the 'nms_top' parameters in this repository, increasing the proposal cap from the previously hard-coded limit of 64 to 5000 to comprehensively assess the effects of our attacks. More discussions on the impact of this parameter are in the ablation study of our paper.
 
